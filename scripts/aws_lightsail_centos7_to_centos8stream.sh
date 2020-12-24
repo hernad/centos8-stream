@@ -82,7 +82,7 @@ grubby --grub2 --default-title
 install_packages() {
 
 dnf -y install htop vim git firewalld
-dnf -y install cockpit cockpit-podman cockpit-system cockpit-dashboard
+dnf -y install cockpit cockpit-podman cockpit-system 
 
 systemctl enable --now firewalld
 systemctl enable --now cockpit.socket
