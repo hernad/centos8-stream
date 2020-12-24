@@ -81,7 +81,13 @@ grubby --grub2 --default-title
 
 install_packages() {
 
-dnf -y install vim git
+dnf -y install htop vim git
+dnf install -y cockpit cockpit-podman cockpit-system cockpit-dashboard
+firewall-cmd --add-service=cockpit --permanent
+firewall-cmd --reload
+systemctl enable --now cockpit
+
+dnf -y install policycoreutils-python-utils
 
 }
 
