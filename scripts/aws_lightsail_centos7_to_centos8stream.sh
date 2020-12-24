@@ -104,8 +104,8 @@ dnf -y install policycoreutils-python-utils
 
 git_hernad_switch_repos() {
 
-cd /root
-git clone https://github.com/hernad/centos8-stream.git
+#cd /root
+#git clone https://github.com/hernad/centos8-stream.git
 
 rm -rf /etc/dnf
 rm -rf /etc/yum.repos.d
@@ -122,7 +122,7 @@ yum -y config-manager --set-enabled powertools
 #yum -y copr enable jdoss/wireguard
 yum -y install wireguard-dkms wireguard-tools
 
-cp -av ../patches/wireguard/1.0.20201221/compat-asm.h  /usr/src/wireguard-1.0.20201221/compat/compat-asm.h
+cp -av /root/centos8-stream/patches/wireguard/1.0.20201221/compat-asm.h  /usr/src/wireguard-1.0.20201221/compat/compat-asm.h
 dkms install wireguard/1.0.20201221 -k $(uname -r)
 }
 
