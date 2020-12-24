@@ -64,9 +64,10 @@ dnf -y install yum
 
 
 elrepo_gpg() {
-curl -LO https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
-gpg --quiet --with-fingerprint RPM-GPG-KEY-elrepo.org
-rpm --import RPM-GPG-KEY-elrepo.org
+#curl -LO https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+#gpg --quiet --with-fingerprint RPM-GPG-KEY-elrepo.org
+#rpm --import RPM-GPG-KEY-elrepo.org
+rpm --import  https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 }
 
 kernel_info() {
