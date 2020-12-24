@@ -1,0 +1,5 @@
+[virt]
+name=virt
+stream=rhel
+profiles=
+state=enabled
