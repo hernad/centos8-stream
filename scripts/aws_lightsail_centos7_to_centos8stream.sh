@@ -130,4 +130,5 @@ dnf install http://ftp.belnet.be/mirror/ftp.centos.org/8-stream/BaseOS/x86_64/os
 #git_hernad_switch_repos
 #kernel_257
 
-wireguard_dkms
+install_packages
+#wireguard_dkms
