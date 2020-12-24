@@ -62,6 +62,13 @@ dnf -y install yum
 
 }
 
+
+elrepo_gpg() {
+curl -LO https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+gpg --quiet --with-fingerprint RPM-GPG-KEY-elrepo.org
+rpm --import RPM-GPG-KEY-elrepo.org
+}
+
 kernel_info() {
 echo "grubby kernels:" 
 grubby --info=ALL | grep ^kernel
@@ -129,6 +136,7 @@ dnf install http://ftp.belnet.be/mirror/ftp.centos.org/8-stream/BaseOS/x86_64/os
 #step3
 #stream
 #yum_install
+#elrepo_gpg
 
 #git_hernad_switch_repos
 #kernel_257
