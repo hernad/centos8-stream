@@ -63,11 +63,13 @@ dnf -y install yum
 }
 
 
-elrepo_gpg() {
+elrepo_install() {
 #curl -LO https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 #gpg --quiet --with-fingerprint RPM-GPG-KEY-elrepo.org
 #rpm --import RPM-GPG-KEY-elrepo.org
 rpm --import  https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+dnf -y install https://www.elrepo.org/elrepo-release-8.el8.elrepo.noarch.rpm
+
 }
 
 kernel_info() {
@@ -137,7 +139,7 @@ step2
 step3
 stream
 yum_install
-elrepo_gpg
+elrepo_install
 
 git_hernad_switch_repos
 #kernel_257
