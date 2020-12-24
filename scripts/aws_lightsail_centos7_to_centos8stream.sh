@@ -105,7 +105,8 @@ yum -y config-manager --set-enabled powertools
 #yum -y copr enable jdoss/wireguard
 yum -y install wireguard-dkms wireguard-tools
 
-#dkms install wireguard/1.0.20201221 -k $(uname -r)
+cp -av $0/../patches/wireguard/1.0.20201221/compat-asm.h  /usr/src/wireguard-1.0.20201221/compat/compat-asm.h
+dkms install wireguard/1.0.20201221 -k $(uname -r)
 }
 
 kernel_257() {
@@ -114,13 +115,13 @@ dnf install http://ftp.belnet.be/mirror/ftp.centos.org/8-stream/BaseOS/x86_64/os
 dnf install http://ftp.belnet.be/mirror/ftp.centos.org/8-stream/BaseOS/x86_64/os/Packages/kernel-core-4.18.0-257.el8.x86_64.rpm
 }
 
-step1
-step2
-step3
-stream
-yum_install
+#step1
+#step2
+#step3
+#stream
+#yum_install
 
-git_hernad_switch_repos
+#git_hernad_switch_repos
 #kernel_257
 
-#wireguard_dkms
+wireguard_dkms
