@@ -105,7 +105,7 @@ yum -y config-manager --set-enabled powertools
 #yum -y copr enable jdoss/wireguard
 yum -y install wireguard-dkms wireguard-tools
 
-cp -av $0/../patches/wireguard/1.0.20201221/compat-asm.h  /usr/src/wireguard-1.0.20201221/compat/compat-asm.h
+cp -av ../patches/wireguard/1.0.20201221/compat-asm.h  /usr/src/wireguard-1.0.20201221/compat/compat-asm.h
 dkms install wireguard/1.0.20201221 -k $(uname -r)
 }
 
