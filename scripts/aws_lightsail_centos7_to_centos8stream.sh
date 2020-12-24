@@ -132,15 +132,15 @@ dnf install http://ftp.belnet.be/mirror/ftp.centos.org/8-stream/BaseOS/x86_64/os
 dnf install http://ftp.belnet.be/mirror/ftp.centos.org/8-stream/BaseOS/x86_64/os/Packages/kernel-core-4.18.0-257.el8.x86_64.rpm
 }
 
-#step1
-#step2
-#step3
-#stream
-#yum_install
-#elrepo_gpg
+step1
+step2
+step3
+stream
+yum_install
+elrepo_gpg
 
-#git_hernad_switch_repos
+git_hernad_switch_repos
 #kernel_257
 
 install_packages
-#wireguard_dkms
+wireguard_dkms
